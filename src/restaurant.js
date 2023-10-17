@@ -3,16 +3,16 @@ const createRestaurantHomePage = () => {
     const pageContent = document.createElement('div');
     pageContent.classList.add('page-content');
 
-    //Image element
-    const image = document.createElement('img');
-    image.src = "dist/fine.jpeg";
-    image.height = "300";
-    pageContent.appendChild(image);
-    
     //Headline element
     const headline = document.createElement('h1');
     headline.textContent = "FINE DINE WITH US";
     pageContent.appendChild(headline);
+    
+    //Image element
+    const image = document.createElement('img');
+    image.src = "./dist/fine.jpeg";
+    image.height = "300";
+    pageContent.appendChild(image);
     
     //copy element
     const copy = document.createElement('p');
