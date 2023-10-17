@@ -19,6 +19,6 @@ const createRestaurantHomePage = () => {
     copy.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita fugit consequatur ipsa assumenda recusandae nesciunt, architecto quod dignissimos tempore asperiores dolores. Doloribus iste consectetur modi ducimus enim autem rem veritatis quisquam. Magni porro harum eveniet sint molestiae accusantium eum omnis, amet nesciunt id molestias ab praesentium nisi vitae illum accusamus incidunt vel minima rem cumque consequuntur atque perspiciatis nulla aspernatur. Eos, voluptas facilis quasi veritatis ratione expedita deserunt quia fugit aspernatur voluptatum, rerum consequatur cupiditate provident impedit, qui illo nulla sapiente minus assumenda? Placeat sit nam beatae qui illum dolores cupiditate, earum, et ipsum, ducimus blanditiis. Distinctio libero natus eius.";
     pageContent.appendChild(copy);
     content.appendChild(pageContent);
-}
+};
 
 export default createRestaurantHomePage;
