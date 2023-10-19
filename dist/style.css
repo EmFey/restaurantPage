@@ -1,10 +1,38 @@
 body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
     box-sizing: border-box;
     min-height: 715px;
     height: 100vh;
     margin: 0;
     position: relative;
 }
+
+h1, h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul, ol {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.menu-category h2 {
+    background-image: linear-gradient(to left, #3f9a3c, #95d393);
+}
+
 
 #nav {
     display: flex;
@@ -57,18 +85,26 @@ ul {
     justify-content: space-between;
 }
 
+/* Add this CSS to your document's <style> tag or external stylesheet */
+
 .menu-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text within the div */
     border: 2px solid #999999;
     padding: 10px;
     width: 30%;
     box-sizing: border-box;
     box-shadow: #00000040 0px 14px 28px, #00000038 0px 10px 10px;
-	padding: 10px;
 	margin: 10px;
 	border-radius: 0.1rem;
 }
 
 .menu-category h2 {
+    color: #28a745;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -79,4 +115,47 @@ ul {
 
 .menu-category li {
     margin-bottom: 8px;
+}
+
+.contact-section {
+    border: 2px solid #999999;
+    padding: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    box-shadow: #00000040 0px 14px 28px, #00000038 0px 10px 10px;
+	margin: 10px;
+	border-radius: 0.1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text within the div */
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 8px;
+}
+
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
 }
