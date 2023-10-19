@@ -5,3 +5,22 @@ body {
     margin: 0;
     position: relative;
 }
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333; /* Add your desired background color */
+    padding: 10px; /* Add padding for better visual appearance */
+}
+
+.tab {
+    cursor: pointer;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add a transition effect for better user experience */
+}
+
+.tab:hover {
+    background-color: #555; /* Change the background color on hover */
+}

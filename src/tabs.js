@@ -5,29 +5,49 @@ import createContactPage from "./contact";
 const createTabs = () => {
     const content = document.querySelector('#content');
 
-    const div1 = document.createElement('div');
-    const div2 = document.createElement('div');
-    const div3 = document.createElement('div');
+    // Create a div for the navigation
+    const navDiv = document.createElement('div');
+    navDiv.setAttribute('id', 'nav');
 
-    div1.setAttribute('id', 'home-btn');
-    div2.setAttribute('id', 'menu-btn');
-    div3.setAttribute('id', 'contact-btn');
+    // Create an unordered list
+    const ulElement = document.createElement('ul');
 
-    div1.classList.add('tab');
-    div2.classList.add('tab');
-    div3.classList.add('tab');
+    // Create three list items with divs
+    for (let i = 1; i <= 3; i++) {
+        const liElement = document.createElement('li');
+        const divElement = document.createElement('div');
 
-    div1.textContent = "Home";
-    div2.textContent = "Menu";
-    div3.textContent = "Contact";
+        // Set id and class attributes for the div
+        divElement.setAttribute('id', `btn-${i}`);
+        divElement.classList.add('tab');
 
-    content.appendChild(div1);
-    content.appendChild(div2);
-    content.appendChild(div3);
+        // Set text content for the div
+        divElement.textContent = i === 1 ? 'Home' : i === 2 ? 'Menu' : 'Contact';
 
-    div1.addEventListener('click', () => { clearContent(); createRestaurantHomePage(); })
-    div2.addEventListener('click', () => { clearContent(); createMenuPage(); })
-    div3.addEventListener('click', () => { clearContent(); createContactPage(); })
+        // Append the div to the list item
+        liElement.appendChild(divElement);
+
+        // Add event listener to each div
+        divElement.addEventListener('click', () => {
+            clearContent();
+            if (i === 1) {
+                createRestaurantHomePage();
+            } else if (i === 2) {
+                createMenuPage();
+            } else if (i === 3) {
+                createContactPage();
+            }
+        });
+
+        // Append the list item to the unordered list
+        ulElement.appendChild(liElement);
+    }
+
+    // Append the unordered list to the navigation div
+    navDiv.appendChild(ulElement);
+
+    // Append the navigation div to the content
+    content.appendChild(navDiv);
 }
 
 function clearContent() {
